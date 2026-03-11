@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pranjal Khare</title>
+  <meta name="description"
+    content="Portfolio of Pranjal Khare — a Software Engineer focused on building scalable backend systems, secure platforms, and intelligent software solutions.">
+  <meta name="keywords"
+    content="software engineer, backend developer, cyber security, AI, system design, Pranjal Khare, portfolio">
+  <meta name="author" content="Pranjal Khare">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pranjal Khare — Software Engineer">
+  <meta property="og:description"
+    content="Building scalable backend systems, secure platforms, and intelligent software solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/profile.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/index.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body>
+
+  <!-- ============================================================
+     Loading Screen
+     ============================================================ -->
+  <div class="loading-screen" id="loadingScreen" aria-hidden="true">
+    <div class="loading-logo">Pranjal<span>Khare</span></div>
+    <div class="loading-bar-track">
+      <div class="loading-bar" id="loadingBar"></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+     Navigation
+     ============================================================ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="#home" class="nav-brand" aria-label="Pranjal Khare Home">
+        <div class="nav-brand-icon">P</div>
+        <div class="nav-brand-text">Pranjal<span>Khare</span></div>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </div>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="material-symbols-outlined" id="themeIcon">dark_mode</span>
+      </button>
+
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ============================================================
+     Hero Section
+     ============================================================ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-blob hero-blob-3"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge reveal">
+          <div class="pulse">
+            <span class="pulse-ring"></span>
+            <span class="pulse-dot"></span>
+          </div>
+          Open to opportunities
+        </div>
+
+        <div class="hero-greeting reveal reveal-delay-1">
+          <span class="hero-greeting-line">Hola, Hi 👋</span>
+        </div>
+
+        <h1 class="hero-title reveal reveal-delay-1">
+          <span class="hero-typing-prefix">I'm </span><span class="hero-typing-text" id="heroTypingText"></span><span
+            class="hero-cursor" id="heroCursor">|</span>
+        </h1>
+
+        <p class="hero-description reveal reveal-delay-2">
+          Computer Science Engineer focused on building scalable backend systems, secure platforms, and intelligent
+          applications.
+        </p>
+
+        <div class="hero-buttons reveal reveal-delay-3">
+          <a href="#projects" class="btn btn-primary">
+            View Projects <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+          <a href="https://github.com/pranjalkhare2004/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
+            style="gap:6px;">
+            <svg style="width:18px;height:18px;fill:currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper reveal reveal-delay-2">
+        <div class="hero-image-container">
+          <div class="hero-image-glow"></div>
+          <div class="hero-image">
+            <img src="assets/images/profile.jpg" alt="Pranjal Khare — Software Engineer" loading="eager" width="400"
+              height="400">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     About Section
+     ============================================================ -->
+  <section class="about section-padding" id="about">
+    <div class="container">
+      <div class="about-visual reveal">
+        <div class="about-card">
+          <span class="material-symbols-outlined">dns</span>
+          <span class="about-card-label">Backend Systems</span>
+        </div>
+        <div class="about-card">
+          <span class="material-symbols-outlined">shield</span>
+          <span class="about-card-label">Cyber Security</span>
+        </div>
+        <div class="about-card">
+          <span class="material-symbols-outlined">psychology</span>
+          <span class="about-card-label">AI & ML</span>
+        </div>
+        <div class="about-card">
+          <span class="material-symbols-outlined">account_tree</span>
+          <span class="about-card-label">System Design</span>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <div class="section-label reveal">
+          <span class="material-symbols-outlined" style="font-size:0.9rem">person</span> About Me
+        </div>
+        <h2 class="section-title reveal">Computer Science engineer building robust, secure systems.</h2>
+        <p class="reveal">
+          I'm a Computer Science Engineering student with a deep interest in backend architecture and distributed
+          systems. I enjoy designing APIs, building microservices, and working with cloud-native technologies to solve
+          real-world problems at scale.
+        </p>
+        <p class="reveal">
+          Beyond backend development, I'm passionate about cybersecurity — from OWASP Top 10 vulnerabilities to malware
+          analysis and secure system design. I also explore the intersection of AI and modern software systems, applying
+          machine learning to build smarter applications.
+        </p>
+        <p class="reveal">
+          Competitive programming sharpens my problem-solving skills — I actively participate on platforms like LeetCode
+          and Codeforces, and I believe strong algorithmic thinking is the foundation of great engineering.
+        </p>
+        <div class="about-stats reveal">
+          <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Problems Solved</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Hackathons</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     Skills Section
+     ============================================================ -->
+  <section class="section-padding" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">
+          <span class="material-symbols-outlined" style="font-size:0.9rem">bolt</span> Technical Arsenal
+        </div>
+        <h2 class="section-title reveal">Technologies I work with</h2>
+        <p class="section-subtitle reveal">From backend architecture to security analysis — tools I use to build and
+          protect systems.</p>
+      </div>
+
+      <div class="skill-tabs reveal" role="tablist">
+        <button class="skill-tab active" data-category="all">All</button>
+        <button class="skill-tab" data-category="languages">Languages</button>
+        <button class="skill-tab" data-category="backend">Backend</button>
+        <button class="skill-tab" data-category="databases">Databases</button>
+        <button class="skill-tab" data-category="devops">Cloud & DevOps</button>
+        <button class="skill-tab" data-category="security">Security</button>
+        <button class="skill-tab" data-category="concepts">Concepts</button>
+      </div>
+
+      <div class="skills-grid stagger-children" id="skillsGrid">
+        <!-- Languages -->
+        <div class="skill-card reveal" data-category="languages" style="--stagger-index:0">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">code</span></div>
+          <div class="skill-name">C++</div>
+        </div>
+        <div class="skill-card reveal" data-category="languages" style="--stagger-index:1">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">data_object</span></div>
+          <div class="skill-name">Python</div>
+        </div>
+        <div class="skill-card reveal" data-category="languages" style="--stagger-index:2">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">javascript</span></div>
+          <div class="skill-name">JavaScript</div>
+        </div>
+        <div class="skill-card reveal" data-category="languages" style="--stagger-index:3">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">database</span></div>
+          <div class="skill-name">SQL</div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-card reveal" data-category="backend" style="--stagger-index:4">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">javascript</span></div>
+          <div class="skill-name">Node.js</div>
+        </div>
+        <div class="skill-card reveal" data-category="backend" style="--stagger-index:5">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">bolt</span></div>
+          <div class="skill-name">Express.js</div>
+        </div>
+        <div class="skill-card reveal" data-category="backend" style="--stagger-index:6">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">api</span></div>
+          <div class="skill-name">REST APIs</div>
+        </div>
+        <div class="skill-card reveal" data-category="backend" style="--stagger-index:7">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">web</span></div>
+          <div class="skill-name">Next.js</div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-card reveal" data-category="databases" style="--stagger-index:8">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">storage</span></div>
+          <div class="skill-name">MongoDB</div>
+        </div>
+        <div class="skill-card reveal" data-category="databases" style="--stagger-index:9">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">database</span></div>
+          <div class="skill-name">PostgreSQL</div>
+        </div>
+        <div class="skill-card reveal" data-category="databases" style="--stagger-index:10">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">table_chart</span></div>
+          <div class="skill-name">MySQL</div>
+        </div>
+        <div class="skill-card reveal" data-category="databases" style="--stagger-index:11">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">cached</span></div>
+          <div class="skill-name">Redis</div>
+        </div>
+
+        <!-- Cloud & DevOps -->
+        <div class="skill-card reveal" data-category="devops" style="--stagger-index:12">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">deployed_code</span></div>
+          <div class="skill-name">Docker</div>
+        </div>
+        <div class="skill-card reveal" data-category="devops" style="--stagger-index:13">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">cloud</span></div>
+          <div class="skill-name">AWS</div>
+        </div>
+        <div class="skill-card reveal" data-category="devops" style="--stagger-index:14">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">integration_instructions</span></div>
+          <div class="skill-name">Git</div>
+        </div>
+        <div class="skill-card reveal" data-category="devops" style="--stagger-index:15">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">terminal</span></div>
+          <div class="skill-name">Linux</div>
+        </div>
+
+        <!-- Security -->
+        <div class="skill-card reveal" data-category="security" style="--stagger-index:16">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">shield</span></div>
+          <div class="skill-name">OWASP Top 10</div>
+        </div>
+        <div class="skill-card reveal" data-category="security" style="--stagger-index:17">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">bug_report</span></div>
+          <div class="skill-name">Malware Analysis</div>
+        </div>
+        <div class="skill-card reveal" data-category="security" style="--stagger-index:18">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">lock</span></div>
+          <div class="skill-name">Secure Systems</div>
+        </div>
+
+        <!-- Concepts -->
+        <div class="skill-card reveal" data-category="concepts" style="--stagger-index:19">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">account_tree</span></div>
+          <div class="skill-name">System Design</div>
+        </div>
+        <div class="skill-card reveal" data-category="concepts" style="--stagger-index:20">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">schema</span></div>
+          <div class="skill-name">Distributed Systems</div>
+        </div>
+        <div class="skill-card reveal" data-category="concepts" style="--stagger-index:21">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">data_object</span></div>
+          <div class="skill-name">OOP</div>
+        </div>
+        <div class="skill-card reveal" data-category="concepts" style="--stagger-index:22">
+          <div class="skill-icon-wrap"><span class="material-symbols-outlined">api</span></div>
+          <div class="skill-name">API Design</div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:var(--space-xl);" class="reveal">
+        <button class="btn btn-secondary" id="skillsToggleBtn">
+          <span class="material-symbols-outlined" style="font-size:1rem;">expand_more</span> Show More Skills
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     Experience Section
+     ============================================================ -->
+  <section class="experience section-padding" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">
+          <span class="material-symbols-outlined" style="font-size:0.9rem">work</span> Career Journey
+        </div>
+        <h2 class="section-title reveal">Professional Experience</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-role">Software Developer Intern</div>
+                <div class="timeline-company">AlgoUniversity (Y Combinator backed)</div>
+              </div>
+              <span class="timeline-period">May 2025 — July 2025</span>
+            </div>
+            <p class="timeline-desc">Designed scalable architecture for an online judge platform. Built a secure Docker-based code execution sandbox with resource constraints for safe execution of untrusted code. Improved backend performance and system scalability.</p>
+            <div style="margin-top:var(--space-md);display:flex;flex-wrap:wrap;gap:var(--space-sm);">
+              <span class="project-tag">#SystemDesign</span>
+              <span class="project-tag">#Docker</span>
+              <span class="project-tag">#Backend</span>
+              <span class="project-tag">#Security</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-role">Web Development Intern</div>
+                <div class="timeline-company">Braud Gauge Educational Products and Services Pvt. Ltd.
+                  <span style="display:inline-block;font-size:0.7rem;color:var(--text-muted);margin-left:var(--space-xs);font-weight:400;">Remote</span>
+                </div>
+              </div>
+              <span class="timeline-period">March 2025 — May 2025</span>
+            </div>
+            <ul class="timeline-desc" style="padding-left:1.1rem;margin:0;">
+              <li>Built and deployed a chess teaching website designed to help beginners learn chess concepts interactively</li>
+              <li>Developed responsive UI components and structured frontend pages for educational content</li>
+              <li>Assisted with deployment and testing to ensure the platform was accessible online</li>
+              <li>Collaborated remotely with the development team to improve user experience and performance</li>
+            </ul>
+            <div style="margin-top:var(--space-md);display:flex;flex-wrap:wrap;gap:var(--space-sm);">
+              <span class="project-tag">#HTML</span>
+              <span class="project-tag">#CSS</span>
+              <span class="project-tag">#JavaScript</span>
+              <span class="project-tag">#Responsive</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     Projects Section
+     ============================================================ -->
+  <section class="section-padding" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">
+          <span class="material-symbols-outlined" style="font-size:0.9rem">rocket_launch</span> Selected Work
+        </div>
+        <h2 class="section-title reveal">Featured Projects</h2>
+        <p class="section-subtitle reveal">A collection of projects showcasing backend engineering, security research, and
+          full-stack capabilities.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Codeopedia -->
+        <div class="project-card reveal">
+          <div class="project-image"
+            style="aspect-ratio:16/9;background:linear-gradient(135deg,var(--bg-accent),rgba(var(--primary-rgb),0.08));display:flex;align-items:center;justify-content:center;">
+            <span class="material-symbols-outlined"
+              style="font-size:3rem;color:var(--primary);opacity:0.3;">terminal</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">#MERN</span>
+              <span class="project-tag">#Docker</span>
+              <span class="project-tag">#Redis</span>
+            </div>
+            <h3 class="project-title">Codeopedia — Secure Online Judge</h3>
+            <p class="project-desc">Full-stack online judge platform executing user code inside isolated Docker
+              containers with asynchronous job queue and automated test case evaluation.</p>
+            <div class="project-actions">
+              <a href="https://github.com/pranjalkhare2004/" class="project-btn project-btn-primary" target="_blank"
+                rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: JobMarshal -->
+        <div class="project-card reveal">
+          <div class="project-image"
+            style="aspect-ratio:16/9;background:linear-gradient(135deg,var(--bg-accent),rgba(var(--primary-rgb),0.08));display:flex;align-items:center;justify-content:center;">
+            <span class="material-symbols-outlined"
+              style="font-size:3rem;color:var(--primary);opacity:0.3;">work</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">#Next.js</span>
+              <span class="project-tag">#PostgreSQL</span>
+              <span class="project-tag">#Prisma</span>
+              <span class="project-tag">#Stripe</span>
+            </div>
+            <h3 class="project-title">JobMarshal — Multi-Tenant Job Platform</h3>
+            <p class="project-desc">SaaS job platform supporting tenant-isolated dashboards, automated job activation
+              using Stripe webhooks, and secure resume uploads.</p>
+            <div class="project-actions">
+              <a href="https://github.com/pranjalkhare2004/" class="project-btn project-btn-primary" target="_blank"
+                rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: WannaCry Malware Analysis -->
+        <div class="project-card reveal">
+          <div class="project-image"
+            style="aspect-ratio:16/9;background:linear-gradient(135deg,var(--bg-accent),rgba(var(--primary-rgb),0.08));display:flex;align-items:center;justify-content:center;">
+            <span class="material-symbols-outlined"
+              style="font-size:3rem;color:var(--primary);opacity:0.3;">bug_report</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">#Ghidra</span>
+              <span class="project-tag">#Wireshark</span>
+              <span class="project-tag">#ProcessMonitor</span>
+            </div>
+            <h3 class="project-title">WannaCry Malware Analysis</h3>
+            <p class="project-desc">Performed static and dynamic analysis of WannaCry ransomware to extract indicators
+              of compromise and analyze propagation behavior.</p>
+            <div class="project-actions">
+              <a href="https://github.com/pranjalkhare2004/" class="project-btn project-btn-primary" target="_blank"
+                rel="noopener noreferrer">Report</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     Achievements & Recognition Section
+     ============================================================ -->
+  <section class="achievements section-padding" id="achievements">
+    <div class="achievements-bg-ring"></div>
+    <div class="achievements-bg-ring"></div>
+    <div class="container">
+      <div class="section-header" style="margin-bottom: var(--space-3xl);">
+        <div class="section-label reveal"
+          style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:#fff;">
+          <span class="material-symbols-outlined" style="font-size:0.9rem">emoji_events</span> Achievements &
+          Recognition
+        </div>
+        <h2 class="section-title reveal" style="color:#fff;">Milestones along the way</h2>
+      </div>
+      <div class="achievements-grid">
+        <div class="achievement-card reveal">
+          <div class="achievement-number" style="font-size:clamp(1.5rem,4vw,2.5rem);">🏅</div>
+          <div class="achievement-label" style="font-size:0.65rem;">AlgoUniversity Elite Program — Top 1.4% of 40,000 applicants</div>
+        </div>
+        <div class="achievement-card reveal reveal-delay-1">
+          <div class="achievement-number" style="font-size:clamp(1.5rem,4vw,2.5rem);">🏆</div>
+          <div class="achievement-label" style="font-size:0.65rem;">EY Techathon Finalist</div>
+        </div>
+        <div class="achievement-card reveal reveal-delay-2">
+          <div class="achievement-number" style="font-size:clamp(1.5rem,4vw,2.5rem);">🥇</div>
+          <div class="achievement-label" style="font-size:0.65rem;">Best Project — VIT Bhopal 1st Industry Conclave
+          </div>
+        </div>
+        <div class="achievement-card reveal reveal-delay-3">
+          <div class="achievement-number">500+</div>
+          <div class="achievement-label">Problems Solved</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     Competitive Programming Section
+     ============================================================ -->
+  <section class="section-padding" id="competitive">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">
+          <span class="material-symbols-outlined" style="font-size:0.9rem">terminal</span> Competitive Programming
+        </div>
+        <h2 class="section-title reveal">Coding Profiles</h2>
+        <p class="section-subtitle reveal">Active on competitive programming platforms, continuously sharpening
+          problem-solving skills.</p>
+      </div>
+
+      <div class="cp-grid">
+        <div class="cp-card reveal">
+          <div class="cp-icon">LC</div>
+          <div class="cp-info">
+            <div class="cp-platform">LeetCode</div>
+            <div class="cp-handle">@pranjal_khare16</div>
+            <div class="cp-stats-row">
+              <span class="cp-stat"><strong>500+</strong> Solved</span>
+              <span class="cp-stat"><strong>Active</strong> Contests</span>
+            </div>
+          </div>
+          <a href="https://leetcode.com/u/pranjal_khare16/" target="_blank" rel="noopener noreferrer" class="cp-link">Profile →</a>
+        </div>
+
+        <div class="cp-card reveal">
+          <div class="cp-icon">CF</div>
+          <div class="cp-info">
+            <div class="cp-platform">Codeforces</div>
+            <div class="cp-handle">@pranjalkhare2004</div>
+            <div class="cp-stats-row">
+              <span class="cp-stat"><strong>Active</strong> Participant</span>
+              <span class="cp-stat"><strong>Regular</strong> Contests</span>
+            </div>
+          </div>
+          <a href="https://codeforces.com/profile/pranjalkhare2004" target="_blank" rel="noopener noreferrer"
+            class="cp-link">Profile →</a>
+        </div>
+
+        <div class="cp-card reveal">
+          <div class="cp-icon">GH</div>
+          <div class="cp-info">
+            <div class="cp-platform">GitHub</div>
+            <div class="cp-handle">@pranjalkhare2004</div>
+            <div class="cp-stats-row">
+              <span class="cp-stat"><strong>Open Source</strong> Projects</span>
+              <span class="cp-stat"><strong>Active</strong> Contributions</span>
+            </div>
+          </div>
+          <a href="https://github.com/pranjalkhare2004/" target="_blank" rel="noopener noreferrer" class="cp-link">Profile →</a>
+        </div>
+
+        <div class="cp-card reveal">
+          <div class="cp-icon">HN</div>
+          <div class="cp-info">
+            <div class="cp-platform">Hashnode</div>
+            <div class="cp-handle">@pranjalkhare16</div>
+            <div class="cp-stats-row">
+              <span class="cp-stat"><strong>Technical</strong> Blog</span>
+              <span class="cp-stat"><strong>CS</strong> Articles</span>
+            </div>
+          </div>
+          <a href="https://hashnode.com/@pranjalkhare16" target="_blank" rel="noopener noreferrer" class="cp-link">Profile →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     Technical Blog Section
+     ============================================================ -->
+  <section class="section-padding" id="blog" style="background:var(--bg-section);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">
+          <span class="material-symbols-outlined" style="font-size:0.9rem">edit_note</span> Technical Blog
+        </div>
+        <h2 class="section-title reveal">Recent Articles</h2>
+        <p class="section-subtitle reveal">Writing about backend engineering, security, and software systems on
+          Hashnode.</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-image"
+            style="aspect-ratio:16/9;background:linear-gradient(135deg,var(--bg-accent),rgba(var(--primary-rgb),0.08));display:flex;align-items:center;justify-content:center;">
+            <span class="material-symbols-outlined"
+              style="font-size:3rem;color:var(--primary);opacity:0.3;">article</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">#Backend</span>
+              <span class="project-tag">#SystemDesign</span>
+            </div>
+            <h3 class="project-title">Understanding Distributed Systems: A Primer</h3>
+            <p class="project-desc">An introduction to distributed system concepts — CAP theorem, consensus algorithms,
+              and why they matter for modern backend architecture.</p>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:var(--space-md);">Recent</div>
+            <div class="project-actions">
+              <a href="https://hashnode.com/@pranjalkhare16" target="_blank" rel="noopener noreferrer"
+                class="project-btn project-btn-primary">Read Article →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-image"
+            style="aspect-ratio:16/9;background:linear-gradient(135deg,var(--bg-accent),rgba(var(--primary-rgb),0.08));display:flex;align-items:center;justify-content:center;">
+            <span class="material-symbols-outlined"
+              style="font-size:3rem;color:var(--primary);opacity:0.3;">shield</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">#Security</span>
+              <span class="project-tag">#OWASP</span>
+            </div>
+            <h3 class="project-title">OWASP Top 10: What Every Developer Should Know</h3>
+            <p class="project-desc">A practical walkthrough of the most critical web application security risks and how
+              to defend against them in production systems.</p>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:var(--space-md);">Recent</div>
+            <div class="project-actions">
+              <a href="https://hashnode.com/@pranjalkhare16" target="_blank" rel="noopener noreferrer"
+                class="project-btn project-btn-primary">Read Article →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-image"
+            style="aspect-ratio:16/9;background:linear-gradient(135deg,var(--bg-accent),rgba(var(--primary-rgb),0.08));display:flex;align-items:center;justify-content:center;">
+            <span class="material-symbols-outlined" style="font-size:3rem;color:var(--primary);opacity:0.3;">api</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">#APIs</span>
+              <span class="project-tag">#Node.js</span>
+            </div>
+            <h3 class="project-title">Designing Clean REST APIs with Node.js</h3>
+            <p class="project-desc">Best practices for building maintainable, well-documented REST APIs — covering
+              routing patterns, error handling, and authentication.</p>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:var(--space-md);">Recent</div>
+            <div class="project-actions">
+              <a href="https://hashnode.com/@pranjalkhare16" target="_blank" rel="noopener noreferrer"
+                class="project-btn project-btn-primary">Read Article →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:var(--space-2xl);">
+        <a href="https://hashnode.com/@pranjalkhare16" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          View All Articles on Hashnode <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     Certifications Section
+     ============================================================ -->
+  <section class="section-padding" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">
+          <span class="material-symbols-outlined" style="font-size:0.9rem">workspace_premium</span> Certifications
+        </div>
+        <h2 class="section-title reveal">Professional Certifications</h2>
+        <p class="section-subtitle reveal">Industry certifications demonstrating expertise in AI, machine learning, and cybersecurity.</p>
+      </div>
+
+      <div class="certifications-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon"><span class="material-symbols-outlined">psychology</span></div>
+          <h3 class="cert-title">Machine Learning</h3>
+          <div class="cert-issuer">Finlatics</div>
+          <div class="cert-date">Issued January 2025</div>
+          <div class="cert-focus">Machine Learning fundamentals and applied modelling.</div>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-1">
+          <div class="cert-icon"><span class="material-symbols-outlined">smart_toy</span></div>
+          <h3 class="cert-title">GEN AI Using IBM Watsonx</h3>
+          <div class="cert-issuer">IBM</div>
+          <div class="cert-date">Issued April 2025</div>
+          <div class="cert-focus">Generative AI concepts and applications using the IBM Watsonx platform.</div>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-2">
+          <div class="cert-icon"><span class="material-symbols-outlined">shield</span></div>
+          <h3 class="cert-title">Cyber Security Analyst</h3>
+          <div class="cert-issuer">IBM</div>
+          <div class="cert-date">Issued May 2025</div>
+          <div class="cert-focus">Threat detection, security analysis, and risk management fundamentals.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     Contact Section
+     ============================================================ -->
+  <section class="section-padding" id="contact">
+    <div class="container">
+      <div class="contact-info">
+        <div>
+          <div class="section-label reveal">
+            <span class="material-symbols-outlined" style="font-size:0.9rem">chat</span> Get In Touch
+          </div>
+          <h2 class="section-title reveal">Let's build something extraordinary.</h2>
+          <p class="section-subtitle reveal">Whether you have a question, a project idea, or just want to say hi — I'd
+            love to hear from you!</p>
+        </div>
+
+        <div class="reveal">
+          <div class="contact-item" style="margin-bottom:var(--space-lg)">
+            <div class="contact-icon"><span class="material-symbols-outlined">mail</span></div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value">pranjalkhare2004@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><span class="material-symbols-outlined">location_on</span></div>
+            <div>
+              <div class="contact-label">Location</div>
+              <div class="contact-value">India</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-socials reveal">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/pranjalkhare16/" target="_blank" rel="noopener noreferrer" class="social-link"
+            aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/pranjalkhare2004/" target="_blank" rel="noopener noreferrer" class="social-link"
+            aria-label="GitHub">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <!-- LeetCode -->
+          <a href="https://leetcode.com/u/pranjal_khare16/" target="_blank" rel="noopener noreferrer" class="social-link"
+            aria-label="LeetCode">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+            </svg>
+          </a>
+          <!-- Codeforces -->
+          <a href="https://codeforces.com/profile/pranjalkhare2004" target="_blank" rel="noopener noreferrer" class="social-link"
+            aria-label="Codeforces">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M4.5 7.5C5.328 7.5 6 8.172 6 9v10.5c0 .828-.672 1.5-1.5 1.5h-3C.672 21 0 20.328 0 19.5V9c0-.828.672-1.5 1.5-1.5h3zm9-4.5c.828 0 1.5.672 1.5 1.5v15c0 .828-.672 1.5-1.5 1.5h-3c-.828 0-1.5-.672-1.5-1.5v-15c0-.828.672-1.5 1.5-1.5h3zm9 7.5c.828 0 1.5.672 1.5 1.5v7.5c0 .828-.672 1.5-1.5 1.5h-3c-.828 0-1.5-.672-1.5-1.5V12c0-.828.672-1.5 1.5-1.5h3z" />
+            </svg>
+          </a>
+          <!-- Hashnode -->
+          <a href="https://hashnode.com/@pranjalkhare16" target="_blank" rel="noopener noreferrer" class="social-link"
+            aria-label="Hashnode Blog">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22.351 8.019l-6.37-6.37a5.63 5.63 0 0 0-7.962 0l-6.37 6.37a5.63 5.63 0 0 0 0 7.962l6.37 6.37a5.63 5.63 0 0 0 7.962 0l6.37-6.37a5.63 5.63 0 0 0 0-7.962zM12 15.953a3.953 3.953 0 1 1 0-7.906 3.953 3.953 0 0 1 0 7.906z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper reveal">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="contactName">Full Name</label>
+              <input class="form-input" type="text" id="contactName" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactEmail">Email Address</label>
+              <input class="form-input" type="email" id="contactEmail" name="email" placeholder="you@example.com"
+                required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contactSubject">Subject</label>
+            <input class="form-input" type="text" id="contactSubject" name="subject" placeholder="Project inquiry">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contactMessage">Message</label>
+            <textarea class="form-textarea" id="contactMessage" name="message" rows="5"
+              placeholder="Tell me about your project or idea..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     Footer
+     ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="nav-brand">
+        <div class="nav-brand-icon">P</div>
+        <div class="nav-brand-text">Pranjal<span>Khare</span></div>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="https://www.linkedin.com/in/pranjalkhare16/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/pranjalkhare2004/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-copy">© 2025 Pranjal Khare. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+     Resume Modal
+     ============================================================ -->
+  <div class="modal-overlay resume-modal" id="resumeModal">
+    <div class="modal-content">
+      <button class="modal-close" id="resumeClose" aria-label="Close resume viewer">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div class="resume-toolbar">
+        <span class="resume-toolbar-title">Resume — Pranjal Khare</span>
+        <div class="resume-toolbar-actions">
+          <button class="resume-toolbar-btn">
+            <span class="material-symbols-outlined" style="font-size:1rem">zoom_in</span> Zoom
+          </button>
+          <button class="resume-toolbar-btn">
+            <span class="material-symbols-outlined" style="font-size:1rem">download</span> Download
+          </button>
+        </div>
+      </div>
+      <div class="resume-viewer">
+        <p>Place your resume PDF here.<br>The embedded viewer will be activated when a PDF is provided.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+     Architecture Modal
+     ============================================================ -->
+  <div class="modal-overlay" id="archModal">
+    <div class="modal-content">
+      <button class="modal-close" id="archModalClose" aria-label="Close diagram viewer">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div class="modal-image" id="archModalBody">
+        <div style="text-align:center; padding:var(--space-4xl);">
+          <span class="material-symbols-outlined"
+            style="font-size:4rem; color:var(--primary); opacity:0.3;">schema</span>
+          <p style="color:var(--text-muted); margin-top:var(--space-md);">Architecture diagram will be displayed here.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+     Resume Side Panel
+     ============================================================ -->
+  <div class="resume-panel-overlay" id="resumePanelOverlay"></div>
+  <div class="resume-panel" id="resumePanel">
+    <div class="resume-panel-header">
+      <span class="resume-panel-title">Resume</span>
+      <div class="resume-panel-actions">
+        <a href="public/resume/pranjal-khare-resume.pdf" download class="resume-panel-btn" id="resumeDownloadBtn">
+          <span class="material-symbols-outlined" style="font-size:1rem">download</span> Download
+        </a>
+        <button class="resume-panel-close" id="resumePanelClose" aria-label="Close resume panel">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+    </div>
+    <div class="resume-panel-body" id="resumePanelBody">
+      <div class="resume-panel-placeholder">
+        <span class="material-symbols-outlined">description</span>
+        <p>Place your resume PDF at<br><code>public/resume/pranjal-khare-resume.pdf</code></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Resume Button -->
+  <button class="floating-resume" id="floatingResumeBtn" aria-label="View resume">
+    <span class="material-symbols-outlined">description</span> Resume
+  </button>
+
+  <!-- Night Vision Overlay -->
+  <div class="night-vision-overlay" id="nightVisionOverlay">
+    <div class="night-vision-text" id="nightVisionText">Dark Mode 🦉</div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
